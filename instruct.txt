@@ -1,0 +1,20 @@
+STEPS
+
+npm init
+npm i --save typescript express @types/express ts-node-dev
+
+paste in package.json in "scripts"
+--->
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly ./app/app.ts",
+    "prod": "tsc && node ./build/app.js"
+<---
+
+npm run tsc -- --init === create tsconfig.json
+
+uncomment tsconfig.json "outDir./build"
+
+*RUN INSTRUCTIONS
+npm run tsc ---> compile
+npm run dev ---> local
+npm run build ---> production
