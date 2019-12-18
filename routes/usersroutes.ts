@@ -12,6 +12,7 @@ class UserRoutes{
     public config(): void {
         this.router.post('/login', controllers.UserController.login);
         this.router.get('/getusers', controllers.UserController.getUsers);
+        this.router.post('/storeusers', controllers.UserController.storeUsers);
     }
 }
 

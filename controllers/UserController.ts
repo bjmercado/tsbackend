@@ -8,9 +8,14 @@ class UserController{
         return res.json({responseData: data});
     }
 
-    public async getUsers(re: express.Request, res: express.Response): Promise<express.Response>{
+    public async getUsers(req: express.Request, res: express.Response): Promise<express.Response>{
         const data = await UserRepo.allUsers();
         return res.json({responseData: data});
+    }
+
+    public async storeUsers(req: express.Request, res: express.Response): Promise<express.Response>{
+        const data = await UserRepo.addUsers(req.body);
+        return res.json({responseData: data[0]});
     }
 }
 

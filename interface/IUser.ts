@@ -3,7 +3,7 @@ export interface IUser{
     user_nickname: string;
     user_email: string;
     user_password: string;
-    role: number
+    role: number;
 }
 
 export interface ILoginData{
