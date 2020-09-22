@@ -39,6 +39,13 @@ class UserRepo{
         const user: IUser = JSON.parse(JSON.stringify(result));
         return user;
     }
+
+    public async removeUser(id: number): Promise<IUser>{
+        const sql: string = `DELETE FROM aurecon_users WHERE id=${id}`;
+        const result = await dbcon.query(sql);
+        const user: IUser = JSON.parse(JSON.stringify(result));
+        return user;
+    }
 }
 
 export default new UserRepo();

@@ -6,7 +6,7 @@ npm i --save typescript express @types/express ts-node-dev
 paste in package.json in "scripts"
 --->
     "tsc": "tsc",
-    "dev": "ts-node-dev --respawn --transpileOnly ./app/app.ts",
+    "dev": "ts-node-dev --respawn --transpile-only ./app/app.ts",
     "prod": "tsc && node ./build/app.js"
 <---
 
